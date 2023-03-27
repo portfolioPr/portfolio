@@ -642,7 +642,7 @@ body {
   -moz-column-gap: 1vw;
        column-gap: 1vw;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   .footer .group-link {
     margin-bottom: 2vw;
   }
@@ -665,9 +665,14 @@ body {
   color: #6d6d6d;
   transition: color 0.3s ease-in-out;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   .footer .group-link .link-sns {
     font-size: 2vw;
+  }
+}
+@media (max-width: 1023px) {
+  .footer .group-link .link-sns {
+    font-size: 3vw;
   }
 }
 @media (max-width: 767px) {
@@ -681,9 +686,14 @@ body {
   line-height: 150%;
   color: #757575;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   .footer .copy {
     font-size: 2vw;
+  }
+}
+@media (max-width: 1023px) {
+  .footer .copy {
+    font-size: 3vw;
   }
 }
 @media (max-width: 767px) {
@@ -1339,6 +1349,11 @@ body {
   font-size: 2vw;
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .work .work-item .txt-box .subject {
+    font-size: 2.5vw;
+  }
+}
 @media (max-width: 1023px) {
   .work .work-item .txt-box .subject {
     font-size: 3vw;
@@ -1357,7 +1372,7 @@ body {
   flex-wrap: wrap;
   gap: 0.5vw;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   .work .work-item .txt-box .tag-wrap {
     width: 100%;
   }
@@ -1373,6 +1388,12 @@ body {
   padding: 0.35vw;
   font-size: 0.7vw;
   text-align: center;
+}
+@media (max-width: 1200px) {
+  .work .work-item .txt-box .tag {
+    font-size: 1vw;
+    padding: 0.7vw;
+  }
 }
 @media (max-width: 1023px) {
   .work .work-item .txt-box .tag {
@@ -1444,11 +1465,24 @@ body {
   z-index: 150;
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .work .work-item .link-view {
+    font-size: 1vw;
+    top: 2vw;
+    right: 2vw;
+    bottom: auto;
+  }
+}
 @media (max-width: 1023px) {
   .work .work-item .link-view {
-    font-size: 1.5vw;
-    top: 3.3vw;
-    bottom: auto;
+    font-size: 1vw;
+  }
+}
+@media (max-width: 767px) {
+  .work .work-item .link-view {
+    font-size: 3vw;
+    top: 5vw;
+    right: 5vw;
   }
 }
 .work .work-item .link-view .txt.hover-line {

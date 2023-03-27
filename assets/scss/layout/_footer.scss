@@ -35,7 +35,7 @@
         align-items: end;
         margin-bottom: 3vw;
         column-gap: 1vw;
-        @include tablet{
+        @include desktop2{
             margin-bottom: 2vw;
         }
         @include mobile{
@@ -53,8 +53,11 @@
             letter-spacing: .04em;
             line-height: 100%;
             text-transform: uppercase;
-            @include tablet{
+            @include desktop2{
                 font-size: 2vw;
+            }
+            @include tablet{
+                font-size: 3vw;
             }
             @include mobile{
                 font-size: 4vw;
@@ -66,8 +69,11 @@
         letter-spacing: .01em;
         line-height: 150%;
         color: $grey;
-        @include tablet{
+        @include desktop2{
             font-size: 2vw;
+        }
+        @include tablet{
+            font-size: 3vw;
         }
         @include mobile{
             color: #fff;
