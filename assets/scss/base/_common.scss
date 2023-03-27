@@ -1,0 +1,186 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.inner{
+   padding: 0 3vw; 
+   @include mobile{
+    padding: 0 10px;
+   }
+}
+
+.txt-oh{
+    display: block;
+    overflow: hidden;
+    .txt{
+        display: block;
+    }
+}
+
+.cursor{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform-origin: center;
+    width: 6vw;
+    height: 6vw;
+    overflow: hidden;
+    color: #000;
+    transform: translate(-100%,-100%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    @include desktop{
+        width: 10vw;
+        height: 10vw;
+    }
+    @include mobile{
+        width: 20vw;
+        height: 20vw;
+    }
+    &.on{
+        opacity: 1;
+        visibility: visible;
+    }
+    &.none{
+        mix-blend-mode:initial;
+    }
+    .label{
+        @include position-center;
+        align-items: center;
+        display: flex;
+        font-size: .7vw;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1em;
+        padding: 0.4vw 0.9vw;
+        text-transform: uppercase;
+        transition: opacity .2s ease-in-out,visibility .2s ease-in-out;
+        transition-delay: .3s;
+        z-index: 1;
+        @include desktop{
+            font-size: 2vw;
+            padding: 2vw 15vw;
+        }
+        @include mobile{
+            font-size: 3vw;
+            padding: 2vw 15vw;
+        }
+    }
+    .bg{
+        border: 3px solid #fff;
+        width: 6vw;
+        height: 6vw;
+        border-radius: 6vw;
+        display: block;
+        transform: scale(.5);
+        transition: transform .2s ease-in-out,opacity .2s ease-in-out,visibility .2s ease-in-out;
+        transition-delay: .3s;
+        @include desktop{
+            width: 10vw;
+            height: 10vw;
+        }
+        @include mobile{
+            width: 20vw;
+            height: 20vw;
+            border-radius: 999em;
+        }
+        &.on{
+            transform: scale(1);
+            background: $yellow;
+            border: 0;
+        }
+    }
+}
+
+.hover-line{
+    display: inline-block;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: -100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.07em;
+    transition: background-size 0.4s ease;
+    &:hover{
+        background-size: 100% 0.07em;
+    }
+    @include mobile{
+        background-size: 0% 0.07em;
+    }
+}
+
+::selection {
+    color: black;
+    background: $yellow;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    mix-blend-mode: difference;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-width: 10px;
+    border-style: solid;
+    right: 10px;
+    position: fixed;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    position: fixed;
+    width: 0px;
+    margin-right: 10px;
+}
+
+.mobile{
+    display: none;
+}
+
+.notScroll{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.kr{
+    font-family: $font-kr;
+}
+
+
+/*animation*/
+@keyframes lineHover {
+    0% {
+        transform: scaleX(1);
+        transform-origin: right center
+    }
+
+    50% {
+        transform: scaleX(0);
+        transform-origin: right center
+    }
+
+    50.001% {
+        transform-origin: left center
+    }
+
+    50.002% {
+        transform: scaleX(0)
+    }
+
+    to {
+        transform: scaleX(1);
+        transform-origin: left center
+    }
+}

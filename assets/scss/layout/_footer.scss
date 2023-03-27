@@ -1,0 +1,79 @@
+
+.footer{
+    .inner2{
+        padding: 12vw 0 3vw;
+    }
+    .group-contact{
+        max-width: 45vw;
+        overflow: hidden;
+        color: #fff;
+        @include mobile{
+            margin-bottom: 40vw;
+            max-width: 100%;
+        }
+        .contact{
+            font-size: 9vw;
+            letter-spacing: -.01em;
+            line-height: 96%;
+            display: flex;
+            align-items: center;
+            .arrow{
+                transform: translateX(0);
+                transition: transform .3s ease-in-out;
+                &.on{
+                    transform: translateX(50%);
+                }
+            }
+            @include mobile{
+                font-size: 14vw;
+                justify-content: center;
+            }
+        }
+    }
+    .group-link{
+        display: flex;
+        align-items: end;
+        margin-bottom: 3vw;
+        column-gap: 1vw;
+        @include tablet{
+            margin-bottom: 2vw;
+        }
+        @include mobile{
+            align-items: center;
+            justify-content: center;
+        }
+        .link-sns{
+            display: block;
+            transition: color .3s ease-in-out;
+            &:hover{
+                color: $hover;
+                transition: color .3s ease-in-out;
+            }
+            font-size: .8vw;
+            letter-spacing: .04em;
+            line-height: 100%;
+            text-transform: uppercase;
+            @include tablet{
+                font-size: 2vw;
+            }
+            @include mobile{
+                font-size: 4vw;
+            }
+        }
+    }
+    .copy{
+        font-size: .9vw;
+        letter-spacing: .01em;
+        line-height: 150%;
+        color: $grey;
+        @include tablet{
+            font-size: 2vw;
+        }
+        @include mobile{
+            color: #fff;
+            text-align: center;
+            font-size: 3vw;
+            padding: 4vw 0;
+        }
+    }
+}

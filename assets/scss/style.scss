@@ -1,0 +1,20 @@
+
+//utills
+@import './utills/variables';
+@import './utills/mixins';
+
+//base
+@import './base/reset';
+@import './base/common';
+@import './base/fonts';
+
+//layout
+@import './layout/header';
+@import './layout/footer';
+
+//components
+@import './components/buttons';
+
+//page
+@import './pages/main.scss';
+@import './pages/view';
