@@ -5,36 +5,31 @@ $(function(){
  
   "(min-width: 1025px)": function() {
 
-  },
-
-  "(min-width: 768px) and (max-width: 1024px)": function() {
-    
-
-    /**
+        /**
      * //parallax-img animation
      */
-    const imgEl = document.querySelectorAll('.sub-content .img-box img')
-    imgEl.forEach(element => {
+        const imgEl = document.querySelectorAll('.sub-content .img-box img')
+        imgEl.forEach(element => {
+    
+          gsap.set(element,{yPercent:-100})
+          gsap.to(element,{
+            scrollTrigger:{
+              trigger:element.parentElement,
+              start:"0% 80%",
+              end:"0% 80%",
+              // markers:true,
+            },
+            stagger: 0.5,
+            // delay:0.5,
+            yPercent:0
+          })
+        });
 
-      gsap.set(element,{yPercent:-100})
-      gsap.to(element,{
-        scrollTrigger:{
-          trigger:element.parentElement,
-          start:"0% 80%",
-          end:"0% 80%",
-          // markers:true,
-        },
-        stagger: 0.5,
-        // delay:0.5,
-        yPercent:0
-      })
-    });
-  
   },
 
-  "(max-width: 767px)": function() {
-		
-  },
+  "(min-width: 768px) and (max-width: 1024px)": function() {},
+
+  "(max-width: 767px)": function() {},
 
   "all": function() {
 
