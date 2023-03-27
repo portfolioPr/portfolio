@@ -1449,6 +1449,7 @@ body {
      object-fit: cover;
   width: 100%;
   height: 120%;
+  border-radius: 1vw;
 }
 .work .work-item .img-area .img-box .video {
   -o-object-fit: cover;
