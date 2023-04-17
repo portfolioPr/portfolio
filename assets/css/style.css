@@ -794,6 +794,10 @@ body {
   -o-object-position: left;
      object-position: left;
 }
+.section .p-left img {
+  -o-object-position: left;
+     object-position: left;
+}
 .section .p-ver .video {
   -o-object-position: left center;
      object-position: left center;
